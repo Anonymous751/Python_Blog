@@ -1,0 +1,16 @@
+
+
+# make sure whrn you want to create a database from python shell  
+
+| Remember to import the app from flask and push the app_context then use db.create_all() command.....  
+
+from Kaman_Blog import app
+app.app_context().push()
+
+
+
+# for token generation use this mentioned version of itsdangerous library and then import the TimedJSONWebSignatureSerializer class from itsdangerous library. 
+
+pip install --force-reinstall itsdangerous==2.0.1
+
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer

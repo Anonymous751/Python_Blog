@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block about %}
+
+<div class="container w-50%">
+    <img src="{{image_url}}" alt="Image not found">
+</div>
+
+
+    <div class="container w-50%" style="margin-top: 9%;" >
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <legend class="border-bottom mb-4">{{legend}}</legend>
+
+            <div class="form-group">
+                {{ form.picture.label }}
+                {{ form.picture(class="form-control form-control-lg") }}
+                {% if form.picture.errors %}
+                {% for error in form.picture.errors %}
+                <span style="color: red;">{{error}}</span>
+                {% endfor %}
+                {% endif %}
+
+            </div>
+           
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+
+
+    <li class="nav-item Logoutbtn" style="list-style-type: none; text-align: center;">
+        <a class="#" href="{{url_for('logout')}}" style="color: #fff; ">Logout</a>
+    </li>
+</div>
+
+{% endblock about %}

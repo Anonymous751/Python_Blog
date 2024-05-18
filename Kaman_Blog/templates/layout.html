@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title>LeadMark Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}">
+    <!-- Bootstrap + LeadMark main styles -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/leadmark.css')  }}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top navgap" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='imgs/logo2.png') }}" alt='Image not found'>
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent navgap-colors">
+
+                <ul class="navbar-nav ml-auto navgap-items">  
+                     {% if show_list_items %}                   
+                    {% endif %}
+
+                    {% if hide_list_items %} 
+                    <li class="nav-item Loginbtn">
+                        <a class="#" href="/" style="color: white; "> <i class="fas fa-arrow-left"></i><span class="icon_text">Go to Home</span></a>
+                    </li>
+                   
+                    {% endif %}
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item Singupbtn">
+                        <a class="#" href="{{url_for('account')}}" style="color: #fff; ">Account</a>
+                    </li>
+                    <li class="nav-item Singupbtn">
+                        <a class="#" href="{{url_for('logout')}}" style="color: #fff; ">Logout</a>
+                    </li>
+                   {% else %}
+                   <li class="nav-item Singupbtn">
+                    <a class="#" href="{{url_for('register')}}" style="color: #fff; ">Register</a>
+                </li>
+                <li class="nav-item Loginbtn">
+                    <a class="#" href="{{url_for('login')}}" style="color: #fff; ">Login</a>
+                </li>
+                   {% endif %}
+                   
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <div class="container w-50" >
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{category}}" style="margin-top: 12%;">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+   
+
+    <!-- Page Header -->
+    {% block header %}
+    
+    {% endblock header %}
+    
+    <!-- Our Services -->
+    {% block services %}
+        
+    {% endblock services %}
+    <!-- End of Our Servives -->
+
+     <!-- Our about -->
+     {% block about %}
+        
+     {% endblock about %}
+     <!-- End of about -->
+
+       <!-- Our portfolio -->
+       {% block portfolio %}
+        
+       {% endblock portfolio %}
+       <!-- End of portfolio -->
+
+       {% block blog %}
+        
+       {% endblock blog %}
+
+       
+       {% block testonomial %}
+        
+       {% endblock testonomial %}
+
+       {% block contact %}
+        
+       {% endblock contact %}
+
+<!-- core  -->
+<script src="{{url_for('static', filename='vendors/jquery/jquery-3.4.1.js')}}"></script>
+<script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+
+<!-- bootstrap 3 affix -->
+<script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.affix.js')}}"></script>
+
+<!-- Isotope -->
+<script src="{{url_for('static', filename='vendors/isotope/isotope.pkgd.js')}}"></script>
+
+<!-- LeadMark js -->
+<script src="{{url_for('static', filename='js/leadmark.js')}}"></script>
+
+</body>
+</html>

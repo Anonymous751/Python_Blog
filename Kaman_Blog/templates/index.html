@@ -1,0 +1,462 @@
+{% extends 'layout.html' %}
+
+<!-- Header Section -->
+{% block header %}
+<header class="header">
+    <div class="overlay">
+        <h1 class="subtitle">Carrer In Python Programming </h1>
+        <h1 class="title">We Are Pythonist</h1> 
+       
+    </div>  
+    <div class="shape">
+        <svg viewBox="0 0 1500 200">
+            <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+        </svg>
+    </div>  
+    <div class="mouse-icon"><div class="wheel"></div></div>
+</header>
+    
+{% endblock header %}
+
+    <!-- End Of Page Header -->
+
+    <!-- Service Section -->
+{% block services %}
+<section  id="service" class="section pt-0">
+    <div class="container">
+        <h6 class="section-title text-center">Our Service</h6>
+        <h6 class="section-subtitle text-center mb-5 pb-3">Crafting  Python Programming until roots</h6>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 mb-md-0">
+                    <div class="card-body">
+                        <small class="text-primary font-weight-bold">01</small>
+                        <h5 class="card-title mt-3"> Coaching <h5>
+                        <p class="mb-0 services_para">We are providing guidance, instruction, and support to individuals interested in learning Python programming language. Coaches typically offer personalized sessions tailored to the student's skill level and learning goals, covering topics such as syntax, data structures, algorithms, application development, and best practices. Through hands-on exercises, real-world examples, and feedback, Python coaching aims to empower learners to become proficient Python developers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 mb-md-0">
+                    <div class="card-body">
+                        <small class="text-primary font-weight-bold">02</small>
+                        <h5 class="card-title mt-3">Delivering Softwares<h5>
+                        <p class="mb-0 services_para">Python is often used to develop and deliver software due to its simplicity, versatility, and extensive libraries. With Python, developers can rapidly build robust and scalable applications for various platforms, including desktop, web, and mobile. Python's ecosystem provides tools for packaging and distributing software, ensuring easy installation and compatibility across different operating systems. Additionally, Python's clear syntax and large community support make it an ideal choice for delivering efficient and maintainable software solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 mb-md-0">
+                    <div class="card-body">
+                        <small class="text-primary font-weight-bold">03</small>
+                        <h5 class="card-title mt-3">Creating Python Librabies/Frameworks<h5>
+                        <p class="mb-0 services_para">Creating libraries and frameworks in Python involves encapsulating reusable functionalities or providing structured foundations for software development. This process enhances productivity and code quality by promoting code reuse, simplifying complex tasks, and fostering consistency in development practices.Additionally, by abstracting common patterns and functionalities, libraries and frameworks allow developers to focus on higher-level problem-solving rather than low-level implementation details.</p>
+                    </div>
+                </div>
+            </div>              
+        </div>
+    </div>
+</section>
+{% endblock services %}
+
+     <!-- About Section -->
+    {% block about %}
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 pr-md-5 mb-4 mb-md-0 ">
+                    <h6 class="section-title mb-0">About Python Programming</h6>
+                    <h6 class="section-subtitle mb-4">Where simplicity meets power, crafting elegance in every line of code</h6>
+                    <p >Python, often dubbed as the "Swiss Army knife" of programming languages, is a dynamic and versatile toolset for developers. Its simplicity belies its power, enabling everything from building web applications to powering artificial intelligence algorithms. Python's community-driven ethos and abundance of libraries foster innovation, making it a go-to choice for tackling complex problems with elegance and flair.</p>
+                    <img class="about_shadow" src="{{ url_for('static', filename='imgs/about.jpg')}}" alt="" class="w-100 mt-3 shadow-sm">
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{{ url_for('static', filename='imgs/about-1.jpg') }}" alt="" class="w-100 shadow-sm">
+                        </div>
+                        <div class="col-6">
+                            <img src="{{ url_for('static', filename='imgs/about-2.jpg')}}" alt="" class="w-100 shadow-sm">
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p>Python stands as a cornerstone, offering a versatile toolkit for exploration, analysis, and modeling. Its intuitive syntax and powerful libraries like Pandas and Scikit-learn empower data scientists to extract insights from raw data and build predictive models with ease. Python's vibrant community and wealth of resources make it the go-to language for tackling diverse data challenges, driving innovation and discovery in fields ranging from finance to healthcare.</p>
+                            <p><b>
+                                "Python web development thrives with frameworks like Django and Flask, enabling rapid and robust web application creation".</b><br>
+                            </p>
+                            <p>
+                                "Python fuels cybersecurity defenses with its agile scripting capabilities and specialized libraries, empowering experts to fortify networks, analyze threats, and safeguard digital assets with precision."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>              
+        </div>
+    </section>
+    {% endblock about %}
+    <!-- End OF About Section -->
+
+    <!-- Portfolio Section -->
+    {% block portfolio %}
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <h6 class="section-title text-center">Our Portfolio</h6>
+            <h6 class="section-subtitle mb-5 text-center">New stunning projects for our amazing clients</h6>
+            <div class="filters">
+                <a href="#" data-filter=".new" class="active">
+                    Aritificial intelligence
+                </a>
+                <a href="#" data-filter=".advertising">
+                    Machine learning
+                </a>
+                <a href="#" data-filter=".branding">
+                    CyberSecurity / Scripting
+                </a>
+                <a href="#" data-filter=".web">
+                    Web Development
+                </a>
+            </div>
+            <div class="portfolio-container"> 
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="{{url_for('static', filename='imgs/pandas.png')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/web-1.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">{{params['field_title']}}</h6>
+                                <p class="subtitle">Explore the Data World </p>
+                            </div>
+                        </div>   
+                    </div>             
+                </div>
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static',filename='imgs/web-2.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{ url_for('static', filename='imgs/web-2.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">WEB</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div> 
+                    </div>                         
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static', filename='imgs/advertising-2.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{ url_for('static', filename='imgs/advertising-2.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">ADVERSTISING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>    
+                    </div>              
+                </div> 
+                <div class="col-md-6 col-lg-4 web">
+                    <div class="portfolio-item">
+                        <img src="{{url_for('static', filename='imgs/web-4.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{ url_for('static', filename='imgs/web-4.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">WEB</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div>
+
+                <div class="col-md-6 col-lg-4 advertising"> 
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static', filename='imgs/advertising-1.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{ url_for('static', filename = 'imgs/advertising-1.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">ADVERSITING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                       
+                </div> 
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static', filename='imgs/web-3.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                       <div class="content-holder">
+                            <a class="img-popup" href="{{ url_for('static', filename = 'imgs/web-3.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">WEB</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static', filename='imgs/advertising-3.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
+                       <div class="content-holder">
+                            <a class="img-popup" href="{{ url_for('static', filename='imgs/advertising-3.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">ADVERSITING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                       
+                </div> 
+                <div class="col-md-6 col-lg-4 advertising new"> 
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static', filename='imgs/advertising-4.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/advertising-4.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">ADVERTISING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                            
+                </div> 
+                <div class="col-md-6 col-lg-4 branding new">
+                    <div class="portfolio-item">
+                        <img src="{{url_for('static', filename='imgs/branding-1.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/branding-1.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">BRANDING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="{{ url_for('static', filename='imgs/branding-2.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/branding-2.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">BRANDING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div> 
+                <div class="col-md-6 col-lg-4 branding new">
+                    <div class="portfolio-item">
+                        <img src="{{url_for('static', filename='imgs/branding-3.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/branding-3.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">BRANDING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                    
+                </div> 
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="{{url_for('static', filename='imgs/branding-4.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                      
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/branding-4.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">BRANDING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                      
+                </div> 
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="{{url_for('static', filename='imgs/branding-5.jpg')}}" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{url_for('static', filename='imgs/branding-5.jpg')}}"></a>
+                            <div class="text-holder">
+                                <h6 class="title">BRANDING</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>                                                   
+                </div>
+            </div>   
+        </div>            
+    </section>
+    {% endblock portfolio %}
+    <!-- End of portfolio section -->
+
+    <!-- Blog Section -->
+    {% block blog %}
+    <section class="section" id="blog">
+        <div class="container">
+            <h6 class="section-title mb-0 text-center">Latest Articles</h6>
+            <h6 class="section-subtitle mb-5 text-center">Architecto provident deserunt eveniet libero</h6>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="{{url_for('static', filename='imgs/blog-1.jpg')}}" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Pariatur Omnis Harum quae sint.</h6>
+                            <p>Fuga quae ratione inventore Perferendis porro.</p>
+                            <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="{{url_for('static', filename='imgs/blog-2.jpg')}}" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title"> Harum Quae Porro</h5>
+                            <p>Fuga quae ratione inventore Perferendis porro.</p>
+                            <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="{{url_for('static', filename='imgs/blog-3.jpg')}}" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Qui optio neque alias</h6>
+                            <p>Fuga quae ratione inventore Perferendis porro.</p>
+                            <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock blog %}
+    <!-- End of Blog Section -->
+
+    <!-- Testmonial Section -->
+    {% block testonomial %}
+    <section class="section" id="testmonial">
+        <div class="container">
+            <h6 class="section-title text-center mb-0">Testmonials</h6>
+            <h6 class="section-subtitle mb-5 text-center">What Our Clients Says</h6>
+            <div class="row">
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="{{url_for('static', filename='imgs/avatar.jpg')}}" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">John Doe</h6>
+                                    <small class="text-muted mb-0">Business Analyst</small>     
+                                </div>
+                            </div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id dicta reiciendis itaque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="{{url_for('static', filename='imgs/avatar-1.jpg')}}" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">Maria Garcia</h6>
+                                    <small class="text-muted mb-0">Insurance Agent</small>      
+                                </div>
+                            </div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id dicta reiciendis itaque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="{{url_for('static', filename='imgs/avatar-2.jpg')}}" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">Mason Miller</h6>
+                                    <small class="text-muted mb-0">Residential Appraiser</small>        
+                                </div>
+                            </div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim modi, id dicta reiciendis itaque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock testonomial %}
+    <!-- End of Testmonial Section -->
+
+    <!-- Contact Section -->
+    {% block contact %}
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="mb-4">+ 123-456-7890</p>
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">12345 Fake ST NoWhere AB Country</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">info@website.com</p>
+                    <p></p>
+                </div>
+                <div class="col-md-7">
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ form.name.label(class="form-control-label") }}
+                            {% if form.name.errors %}
+                            {{ form.name(size = 20,class="form-control form-control-lg is_invalid")}}
+                            {% for error in form.name.errors %}
+                            <span style="color: red;">{{error}}</span>
+                            {% endfor %}
+                            {% else %}
+                            {{ form.name(class="form-control form-control-lg") }}
+                            {% endif %}
+                            
+                        </div>
+                        <div class="form-group">
+                            {{ form.email.label(class="form-control-label") }}
+                            {% if form.email.errors %}
+                            {{ form.email(class="form-control form-control-lg is_invalid")}}
+                            {% for error in form.email.errors %}
+                            <span style="color: red;">{{error}}</span>
+                            {% endfor %}
+                            {% else %}
+                            {{ form.email(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.subject.label(class="form-control-label") }}
+                            {% if form.subject.errors %}
+                            {{ form.subject(size = 20, class="form-control form-control-lg is_invalid")}}
+                            {% for error in form.subject.errors %}
+                            <span style="color: red;">{{error}}</span>
+                            {% endfor %}
+                            {% else %}
+                            {{ form.subject(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.message.label(class="form-control-label") }}
+                            {% if form.message.errors %}
+                            {{ form.message(class="form-control form-control-lg is_invalid")}}
+                            {% for error in form.message.errors %}
+                            <span style="color: red;">{{error}}</span>
+                            {% endfor %}
+                            {% else %}
+                            {{ form.message(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-primary") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, LeadMark Created By <a href="#" target="_blank">DevCrud.</a>  All rights reserved </p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+	
+        
+    {% endblock contact %}
+	
